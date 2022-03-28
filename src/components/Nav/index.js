@@ -1,9 +1,12 @@
-import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/image/logo.png";
 import classes from "../../assets/styles/Nav.module.css";
+import CalculatorIcon from "../Icons/CalculatorIcon";
 import CopyIcon from "../Icons/CopyIcon";
 import HomeIcon from "../Icons/HomeIcon";
+import PayIcon from "../Icons/PayIcon";
+import PreAlertIcon from "../Icons/PreAlertIcon";
+import RPMAddressIcon from "../Icons/RPMAddressIcon";
 export default function Nav() {
   return (
     <>
@@ -24,7 +27,7 @@ export default function Nav() {
           <li>
             <Link to="/pay">
               <span className={classes.sidebarIcon}>
-                <HomeIcon stroke="#fff" strokeWidth="2" />
+                <PayIcon stroke="#fff" strokeWidth="2" />
               </span>
               <span className={classes.navText}>Pay</span>
             </Link>
@@ -32,7 +35,7 @@ export default function Nav() {
           <li>
             <Link to="/pre-alert">
               <span className={classes.sidebarIcon}>
-                <FaHome className="text-3xl" />
+                <PreAlertIcon stroke="#fff" strokeWidth="2" />
               </span>
               <span className={classes.navText}>Pre Alert</span>
             </Link>
@@ -40,7 +43,7 @@ export default function Nav() {
           <li>
             <Link to="/calculator">
               <span className={classes.sidebarIcon}>
-                <FaHome className="text-3xl" />
+                <CalculatorIcon stroke="#fff" strokeWidth="2" />
               </span>
               <span className={classes.navText}>Calculator</span>
             </Link>
@@ -49,7 +52,7 @@ export default function Nav() {
           <li>
             <a href="#my-modal-2">
               <span className={classes.sidebarIcon}>
-                <FaHome className="text-3xl" />
+                <RPMAddressIcon stroke="#fff" strokeWidth="2" />
               </span>
               <span className={classes.navText}>RPM Address</span>
             </a>

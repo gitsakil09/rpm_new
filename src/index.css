@@ -22,9 +22,12 @@
     @apply bg-blue-dark;
   }
   .main-wrapper {
-    margin-left: 260px;
-    padding-top: 24px;
+    /* margin-left: 260px;
+    padding-top: 24px;*/
     height: 100vh;
+  }
+  .content-wrap {
+    margin-left: 260px;
   }
   .custom-table :where(tbody th, tbody td) {
     background: transparent;
