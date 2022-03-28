@@ -6,7 +6,7 @@ import Title from "../../components/Title";
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header title="Package Payment" icon={false} />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
           <Title title="Package list" />
@@ -107,10 +107,10 @@ const Home = () => {
             <div className="text-2xl font-medium">Total :$10.50 TTD</div>
           </div>
         </div>
-        <div className="bg-blue-light fixed bottom-0 left-0 p-10 w-full">
-          <BtnWide title="Cancel" classItem="ml-52 bg-orange" />
-          <BtnWide title="Pay Now" classItem="ml-5 bg-green" />
-        </div>
+      </div>
+      <div className="bg-blue-light bottom-0 left-0 p-10 w-full">
+        <BtnWide title="Cancel" classItem="ml-52 bg-orange" />
+        <BtnWide title="Pay Now" classItem="ml-5 bg-green" />
       </div>
     </>
   );

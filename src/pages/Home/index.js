@@ -5,8 +5,8 @@ import Title from "../../components/Title";
 const Home = () => {
   return (
     <>
-      <Header />
-      <div className="content-wrap mt-10">
+      <Header title="My Packages" icon={true} />
+      <div className="content-wrap">
         <div className="flex justify-between">
           <Title title="Incoming packages" />
           <Search

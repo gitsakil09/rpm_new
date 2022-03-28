@@ -4,6 +4,7 @@ import "./App.css";
 import Layout from "./components/Layout";
 import Calculator from "./pages/Calculator";
 import Home from "./pages/Home";
+import MyAccount from "./pages/MyAccount";
 import Pay from "./pages/Pay";
 import PreAlert from "./pages/PreAlert";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/pay" element={<Pay />} />
           <Route path="/pre-alert" element={<PreAlert />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/my-account" element={<MyAccount />} />
         </Routes>
       </Layout>
     </Router>

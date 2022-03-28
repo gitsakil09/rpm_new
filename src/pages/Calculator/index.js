@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 const Calculator = () => {
   return (
     <>
-      <Header />
+      <Header title="Shipping Calculator" icon={false} />
       <div className="content-wrap mt-10">
         <div className="grid grid-cols-7 gap-4">
           <div className="col-span-3">

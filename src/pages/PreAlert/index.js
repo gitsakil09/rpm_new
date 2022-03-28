@@ -5,7 +5,7 @@ import Title from "../../components/Title";
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header title="Pre-Alert" icon={false} />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
           <Title title="Pre-Alert packages" />

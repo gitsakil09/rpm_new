@@ -1,11 +1,13 @@
-// MdArrowBack
-import { FaUserAlt } from "react-icons/fa";
 import { MdArrowBack } from "react-icons/md";
 import flagTwo from "../../assets/image/user-flag-one-two.png";
 import flagOne from "../../assets/image/user-flag-one.png";
-import BeautyHealth from "../../components/Icons/BeautyHealth";
+import AccountMenu from "../Dropdown/AccountMenu";
+import DeliveredIcon from "../Icons/DeliveredIcon";
+import DetainedIcon from "../Icons/DetainedIcon";
+import IncomingIcon from "../Icons/IncomingIcon";
+import ReadyIcon from "../Icons/ReadyIcon";
 
-const Header = () => {
+const Header = ({ title, icon }) => {
   return (
     <div className="h-[188px] header">
       <div className="grid grid-cols-3 gap-4 px-14 items-center h-full">
@@ -31,33 +33,35 @@ const Header = () => {
             </div>
             <div className="col-span-2">
               <div className="flex flex-col items-center">
-                <h2 className="text-3xl text-white font-medium">My Packages</h2>
-                <div className="mt-5">
-                  <button className="btn btn-circle packages-circle-btn btn-xl border-0 hover:bg-white packages-icon-active">
-                    <BeautyHealth stroke="red" />
-                  </button>
+                <h2 className="text-3xl text-white font-medium">
+                  {title} {icon}
+                </h2>
+                {icon ? (
+                  <div className="mt-5 flex">
+                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 hover:bg-white packages-icon-active">
+                      <IncomingIcon stroke="#fff" strokeWidth="1" />
+                    </button>
 
-                  <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
-                    <MdArrowBack className="text-white  text-2xl" />
-                  </button>
+                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4 flex items-center justify-center">
+                      <ReadyIcon stroke="#fff" strokeWidth="1" />
+                    </button>
 
-                  <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
-                    <MdArrowBack className="text-white  text-2xl" />
-                  </button>
+                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
+                      <DeliveredIcon stroke="#fff" strokeWidth="1" />
+                    </button>
 
-                  <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
-                    <MdArrowBack className="text-white  text-2xl" />
-                  </button>
-                </div>
+                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
+                      <DetainedIcon stroke="#fff" strokeWidth="1" />
+                    </button>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex justify-end">
-          <button className="btn btn-circle custom-circle-btn bg-white border-2 border-sky-blue hover:bg-sky-blue hover:border-sky-blue btn-lg translate-y-[-6px]">
-            <FaUserAlt className="text-sky-blue text-2xl" />
-          </button>
+          <AccountMenu />
         </div>
       </div>
     </div>

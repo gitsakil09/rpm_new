@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  top: 0;
   background: url("../src/assets/image/header-shape.png") left top no-repeat,
     url("../src/assets/image/header-bg.png") left top repeat;
 }
@@ -11,23 +15,25 @@
 @layer components {
   body {
     background: #f2f4fc;
+    height: 100vh;
   }
   .custom-circle-btn:hover svg {
     @apply text-white;
   }
   .packages-circle-btn:hover svg {
     @apply text-sky-blue;
+    stroke: #365f86 !important;
   }
   .packages-icon-active {
     @apply bg-blue-dark;
   }
   .main-wrapper {
-    /* margin-left: 260px;
-    padding-top: 24px;*/
-    height: 100vh;
+    padding-top: 230px;
+    background: #f2f4fc;
   }
   .content-wrap {
     margin-left: 260px;
+    margin-bottom: 80px;
   }
   .custom-table :where(tbody th, tbody td) {
     background: transparent;
@@ -51,5 +57,25 @@
   }
   .calculator-table thead {
     @apply border-b-[1px] border-gray-200;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    @apply bg-sky-300;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 }
