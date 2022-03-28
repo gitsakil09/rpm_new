@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  position: relative;
+  background: url("../src/assets/image/header-shape.png") left top no-repeat,
+    url("../src/assets/image/header-bg.png") left top repeat;
+}
+
+@layer components {
+  body {
+    background: #f2f4fc;
+  }
+  .custom-circle-btn:hover svg {
+    @apply text-white;
+  }
+  .packages-circle-btn:hover svg {
+    @apply text-sky-blue;
+  }
+  .packages-icon-active {
+    @apply bg-blue-dark;
+  }
+  .main-wrapper {
+    margin-left: 260px;
+    padding-top: 24px;
+    height: 100vh;
+  }
+  .custom-table :where(tbody th, tbody td) {
+    background: transparent;
+  }
+  .custom-table tr:nth-child(even) {
+    background-color: white;
+  }
+  .custom-search .input-group input {
+    border: none;
+  }
+  .custom-search .input-group button,
+  .custom-search .input-group button:hover {
+    @apply bg-white border-0;
+  }
+  .custom-search .input-group input:focus {
+    border: none;
+    outline: 0;
+  }
+  .calculator-table.table-compact :where(th, td) {
+    background: transparent;
+  }
+  .calculator-table thead {
+    @apply border-b-[1px] border-gray-200;
+  }
+}

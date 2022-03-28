@@ -1,0 +1,139 @@
+.fa2x {
+  font-size: 2em;
+}
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.mainMenu:hover,
+nav.mainMenu.expanded {
+  width: 250px;
+  overflow: visible;
+}
+
+.mainMenu {
+  background-color: #365f86;
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  top: 188px;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 80px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+
+.mainMenu > ul {
+  margin: 7px 0;
+}
+
+.mainMenu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+.mainMenu li > a .sidebarIcon {
+  width: 88px;
+  display: inline-block;
+  text-align: center;
+}
+.mainMenu li > a .sidebarIcon svg {
+  margin: auto;
+  color: white;
+}
+.mainMenu li > a {
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #fff;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.mainMenu .navIcon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.mainMenu .navText {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.mainMenu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.noTouch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.noTouch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+.mainMenu li:hover > a,
+nav.mainMenu li.active > a,
+.dropdownMenu > li > a:hover,
+.dropdownMenu > li > a:focus,
+.dropdownMenu > .active > a,
+.dropdownMenu > .active > a:hover,
+.dropdownMenu > .active > a:focus,
+.noTouch .dashboardPage nav.dashboardMenu ul li:hover a,
+.dashboardPage nav.dashboardMenu ul li.active a {
+  color: #fff;
+  background-color: #ffad62;
+}
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
