@@ -1,11 +1,11 @@
-import { FaPencilAlt } from "react-icons/fa";
 import { MdArrowBack } from "react-icons/md";
+import Address from "../../assets/image/Address.png";
+import Delivery from "../../assets/image/Delivery.png";
+import IdentityIcon from "../../assets/image/IdentityIcon.png";
+import OtherSettings from "../../assets/image/OtherSettings.png";
 import QrCode from "../../assets/image/qr-code.png";
 import BtnWide from "../../components/Buttons/BtnWide";
-import DeliveredIcon from "../../components/Icons/DeliveredIcon";
-import DetainedIcon from "../../components/Icons/DetainedIcon";
-import IncomingIcon from "../../components/Icons/IncomingIcon";
-import ReadyIcon from "../../components/Icons/ReadyIcon";
+import EditIcon from "../../components/Icons/EditIcon";
 
 const MyAccount = () => {
   return (
@@ -18,6 +18,7 @@ const MyAccount = () => {
                 <button className="btn btn-circle custom-circle-btn bg-white border-2 border-sky-blue hover:bg-sky-blue hover:border-sky-blue btn-lg translate-y-[-6px]">
                   <MdArrowBack className="text-sky-blue text-3xl" />
                 </button>
+
                 <div className="ml-6">
                   <h5 className="text-sm text-white">Welcome</h5>
                   <h3 className="text-xl text-white">[Current User]</h3>
@@ -29,20 +30,20 @@ const MyAccount = () => {
                     My Account
                   </h2>
                   <div className="mt-5 flex">
-                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 hover:bg-white packages-icon-active">
-                      <IncomingIcon stroke="#fff" strokeWidth="1" />
+                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 bg-orange ">
+                      <img src={IdentityIcon} alt="" />
                     </button>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4 flex items-center justify-center">
-                      <ReadyIcon stroke="#fff" strokeWidth="1" />
+                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 ml-4 flex items-center justify-center">
+                      <img src={Address} alt="" />
                     </button>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
-                      <DeliveredIcon stroke="#fff" strokeWidth="1" />
+                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 ml-4">
+                      <img src={Delivery} alt="" />
                     </button>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
-                      <DetainedIcon stroke="#fff" strokeWidth="1" />
+                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 ml-4 packages-icon-active">
+                      <img src={OtherSettings} alt="" />
                     </button>
                   </div>
                 </div>
@@ -54,71 +55,77 @@ const MyAccount = () => {
       <div className="content-wrap">
         <div className="flex justify-between">
           <h1 className="text-3xl">Main contact information</h1>
-
-          <button class="btn btn-circle bg-orange border-0 mr-20">
-            <FaPencilAlt className="text-xl" />
-          </button>
+          <div className="mr-20">
+            <button class="btn btn-circle bg-orange border-0 flex items-center justify-center pt-1">
+              <EditIcon stroke="#fff" strokeWidth="2" />
+            </button>
+            <p className="text-center text-xs text-gray mt-1">Edit</p>
+          </div>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 mt-10">
+        <div className="grid grid-cols-3 gap-4 mt-10">
           <div>
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">First Name</span>
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
+                  First Name
+                </span>
               </label>
               <input
                 type="text"
                 placeholder="John"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
 
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
                   Email Address
                 </span>
               </label>
               <input
                 type="text"
                 placeholder="joe@company.com"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
 
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
                   Primary Contact No.
                 </span>
               </label>
               <input
                 type="text"
                 placeholder="1 868 336-5896"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
           </div>
 
           <div>
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">Last Name</span>
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
+                  Last Name
+                </span>
               </label>
               <input
                 type="text"
                 placeholder="Doe"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
 
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
                   Identification No. and Type
                 </span>
               </label>
-              <select class="select select-bordered">
+              <select className="select select-bordered">
                 <option disabled selected>
                   Type
                 </option>
@@ -130,16 +137,16 @@ const MyAccount = () => {
               </select>
             </div>
 
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-xl text-sky-dark">
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-xl text-sky-dark">
                   Secondary Contact No.
                 </span>
               </label>
               <input
                 type="text"
                 placeholder="1 868 665-8954"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
           </div>

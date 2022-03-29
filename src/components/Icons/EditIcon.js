@@ -1,55 +1,46 @@
-const DeliveredIcon = ({ strokeWidth, stroke }) => {
+const EditIcon = ({ strokeWidth, stroke }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-7 w-8"
+      className="h-6 w-6"
       fill="none"
-      viewBox="0 0 18 20"
+      viewBox="0 0 20 24"
       stroke={stroke}
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M12,2.1H5.3c-2.3,0-4.2,1.8-4.2,4v6.4c0,2.2,1.9,4,4.2,4H12c2.3,0,4.2-1.8,4.2-4V6.1C16.2,3.9,14.3,2.1,12,2.1z"
+        d="M3.6,16.1l-0.9,0.2l-0.7-0.7l0.2-0.9c0.3-1.3,0.9-2.5,1.8-3.4l9.7-9.7c0.2-0.2,0.4-0.4,0.7-0.5
+        C14.6,1.1,14.8,1,15.1,1c0.3,0,0.6,0.1,0.8,0.2c0.3,0.1,0.5,0.3,0.7,0.5l0,0C17,2,17.2,2.6,17.2,3.1c0,0.6-0.2,1.1-0.6,1.5L7,14.3
+        C6,15.2,4.8,15.9,3.6,16.1z"
       />
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M6.1,0.8V4"
+        d="M13.1,2.2l3,3"
       />
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M11.8,0.8V4"
+        d="M7.8,7.5l3,3"
       />
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M4.8,8.4h1.3"
+        d="M14.2,7l1.2-1.2c0.2-0.2,0.5-0.3,0.8-0.3c0.3,0,0.6,0.1,0.8,0.3l0,0c0.1,0.1,0.2,0.2,0.2,0.4
+        c0.1,0.1,0.1,0.3,0.1,0.4c0,0.1,0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.2,0.4l-4.6,4.6"
       />
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M8.6,8.4h3.8"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-        d="M4.8,12.2h1.3"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-        d="M8.6,12.2h3.8"
+        d="M2.3,16L1,17.3"
       />
     </svg>
   );
 };
-export default DeliveredIcon;
+export default EditIcon;

@@ -13,13 +13,13 @@ const Calculator = () => {
               + Insurance + Frieght)
             </h6>
 
-            <div class="form-control w-full mt-6">
-              <label class="label">
-                <span class="label-text text-base font-medium">
+            <div className="form-control w-full mt-6">
+              <label className="label">
+                <span className="label-text text-base font-medium">
                   Item Category
                 </span>
               </label>
-              <select class="select select-bordered bg-sky-300 text-white">
+              <select className="select select-bordered bg-sky-300 text-white">
                 <option disabled selected>
                   Pick one
                 </option>
@@ -31,27 +31,27 @@ const Calculator = () => {
               </select>
             </div>
 
-            <div class="form-control w-full mt-3">
-              <label class="label">
-                <span class="label-text text-base font-medium">
+            <div className="form-control w-full mt-3">
+              <label className="label">
+                <span className="label-text text-base font-medium">
                   Total Value
                 </span>
               </label>
               <input
                 type="text"
                 placeholder="$ USD"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
 
-            <div class="form-control w-fullmt-3">
-              <label class="label">
-                <span class="label-text text-base font-medium">Weight</span>
+            <div className="form-control w-fullmt-3">
+              <label className="label">
+                <span className="label-text text-base font-medium">Weight</span>
               </label>
               <input
                 type="text"
                 placeholder="Lbs"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
               />
             </div>
 
@@ -82,8 +82,8 @@ const Calculator = () => {
               Estimated Shipping Fees
             </h3>
             <div className="w-[80%] mt-10">
-              <div class="overflow-x-auto">
-                <table class="table table-compact w-full calculator-table">
+              <div className="overflow-x-auto">
+                <table className="table table-compact w-full calculator-table">
                   <thead>
                     <tr>
                       <th></th>

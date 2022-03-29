@@ -6,10 +6,10 @@ import Title from "../../components/Title";
 const Home = () => {
   return (
     <>
-      <Header title="Package Payment" icon={false} />
+      <Header title="Payment Review" icon={false} />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
-          <Title title="Package list" />
+          <Title title="Order Summary" />
           <Search
             classItem="form-control custom-search mr-16"
             iconColor="#999999"
@@ -20,98 +20,60 @@ const Home = () => {
             <thead>
               <tr>
                 <th className="bg-sky-light">
-                  <label className="flex">
-                    <input type="checkbox" className="checkbox" />
-
-                    <div className="text-blue-dark text-base ml-2">
-                      Select all
-                    </div>
-                  </label>
-                </th>
-                <th className="bg-sky-light">
                   <div className="text-blue-dark text-base">invoice no.</div>
                 </th>
                 <th className="bg-sky-light">
                   <div className="text-blue-dark text-base">description</div>
                 </th>
-                <th className="bg-sky-light">
-                  <div className="text-blue-dark text-base">Status</div>
-                </th>
 
-                <th className="bg-sky-light">
-                  <div className="text-blue-dark text-base">Weight</div>
-                </th>
-
-                <th className="bg-sky-light">
+                <th className="bg-sky-light text-right">
                   <div className="text-blue-dark text-base">cost</div>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="text-sky-blue">#0001</div>
                   </div>
                 </td>
                 <td>Marbles</td>
-                <td>Out for delivery</td>
-                <td>Received at Miami</td>
-                <td>3.00 Lbs </td>
+                <td className="text-right">3.00 Lbs </td>
               </tr>
               <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="text-sky-blue">#0001</div>
                   </div>
                 </td>
                 <td>Marbles</td>
-                <td>Out for delivery</td>
-                <td>Received at Miami</td>
-                <td>3.00 Lbs </td>
+                <td className="text-right">3.00 Lbs </td>
               </tr>
               <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="text-sky-blue">#0001</div>
                   </div>
                 </td>
                 <td>Marbles</td>
-                <td>Out for delivery</td>
-                <td>Received at Miami</td>
-                <td>3.00 Lbs </td>
+                <td className="text-right">3.00 Lbs </td>
               </tr>
             </tbody>
           </table>
           <div className="h-[1px] bg-gray w-full"></div>
           <div className="flex justify-between mt-3">
             <div>
-              <p className="font-medium">Selected items: $10.00</p>
               <p className="font-medium">Transaction fee: $0.50 TTD</p>
             </div>
-            <div className="text-2xl font-medium">Total :$10.50 TTD</div>
+            <div className="text-2xl font-medium">Order Total: $15.50 TTD</div>
           </div>
         </div>
       </div>
       <div className="bg-blue-light bottom-0 left-0 p-10 w-full">
-        <BtnWide url="/" title="Cancel" classItem="ml-52 bg-orange" />
+        <BtnWide title="Cancel" classItem="ml-52 bg-orange" />
         <BtnWide
-          url="/payment-information"
+          url="/Order-success"
           title="Pay Now"
           classItem="ml-5 bg-green"
         />
