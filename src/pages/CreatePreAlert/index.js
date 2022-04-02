@@ -7,7 +7,7 @@ import Input from "../../components/Input";
 const CreatePreAlert = () => {
   return (
     <>
-      <Header title="Pre-Alert" icon={false} />
+      <Header url="/pre-alert" title="Pre-Alert" icon={false} />
       <div className="content-wrap mt-10">
         <div className="grid grid-cols-3 gap-4">
           <div className="col-span-2">

@@ -9,7 +9,7 @@ import Input from "../../components/Input";
 const PaymentInformation = () => {
   return (
     <>
-      <Header title="Payment Information" icon={false} />
+      <Header url="/pay" title="Payment Information" icon={false} />
       <div className="content-wrap mt-10">
         <div className="flex items-center">
           <h2 className="text-2xl font-medium">Amount to pay</h2>
@@ -41,7 +41,7 @@ const PaymentInformation = () => {
                 wrapStyle="ml-5 w-[75px]"
                 textStyle="font-bold"
               />
-              <button class="btn btn-circle btn-md bg-gray border-0 mt-10 ml-6">
+              <button className="btn btn-circle btn-md bg-gray border-0 mt-10 ml-6">
                 <FaQuestion className="text-2xl" />
               </button>
             </div>

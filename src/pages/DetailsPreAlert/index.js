@@ -8,7 +8,7 @@ import Input from "../../components/Input";
 const DetailsPreAlert = () => {
   return (
     <>
-      <Header title="Pre-Alert" icon={false} />
+      <Header url="/pre-alert" title="Pre-Alert" icon={false} />
       <div className="content-wrap mt-10">
         <div className="grid grid-cols-3 gap-4">
           <div className="col-span-2">
@@ -90,18 +90,18 @@ const DetailsPreAlert = () => {
                   </select>
                 </div>
 
-                <div className="form-control w-[287px] mt-4">
+                {/* <div className="form-control w-[287px] mt-4">
                   <textarea
                     className="textarea border-sky-dark h-[140px]"
                     placeholder=" You are responsible for listing the correct and true amount of
                   your shipment. This information is given to customs."
                   ></textarea>
-                </div>
+                </div> */}
 
-                {/* <div className="text-sky-dark text-sm border-[1px] border-sky-dark p-5 rounded-md mt-4 w-[287px]">
+                <div className="text-sky-dark text-sm border-[1px] border-sky-dark p-5 rounded-md mt-4 w-[287px]">
                   You are responsible for listing the correct and true amount of
                   your shipment. This information is given to customs.
-                </div> */}
+                </div>
               </div>
             </div>
 

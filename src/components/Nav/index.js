@@ -17,7 +17,7 @@ export default function Nav() {
         <div className="w-[232px] ml-2 h-[1px] bg-white"></div>
         <ul>
           <li>
-            <Link to="">
+            <Link to="/">
               <span className={classes.sidebarIcon}>
                 <HomeIcon stroke="#fff" strokeWidth="2" />
               </span>

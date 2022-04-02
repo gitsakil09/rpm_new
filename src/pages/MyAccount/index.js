@@ -1,57 +1,24 @@
-import { MdArrowBack } from "react-icons/md";
 import Address from "../../assets/image/Address.png";
 import Delivery from "../../assets/image/Delivery.png";
 import IdentityIcon from "../../assets/image/IdentityIcon.png";
 import OtherSettings from "../../assets/image/OtherSettings.png";
 import QrCode from "../../assets/image/qr-code.png";
 import BtnWide from "../../components/Buttons/BtnWide";
+import HeaderGuest from "../../components/Header/HeaderGuest";
 import EditIcon from "../../components/Icons/EditIcon";
+import Input from "../../components/Input";
 
 const MyAccount = () => {
   return (
     <>
-      <div className="h-[188px] header">
-        <div className="grid grid-cols-3 gap-4 px-14 items-center h-full">
-          <div className="col-span-2">
-            <div className="grid grid-cols-3 gap-4">
-              <div className="flex">
-                <button className="btn btn-circle custom-circle-btn bg-white border-2 border-sky-blue hover:bg-sky-blue hover:border-sky-blue btn-lg translate-y-[-6px]">
-                  <MdArrowBack className="text-sky-blue text-3xl" />
-                </button>
-
-                <div className="ml-6">
-                  <h5 className="text-sm text-white">Welcome</h5>
-                  <h3 className="text-xl text-white">[Current User]</h3>
-                </div>
-              </div>
-              <div className="col-span-2">
-                <div className="flex flex-col items-center">
-                  <h2 className="text-3xl text-white font-medium">
-                    My Account
-                  </h2>
-                  <div className="mt-5 flex">
-                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 bg-orange ">
-                      <img src={IdentityIcon} alt="" />
-                    </button>
-
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 ml-4 flex items-center justify-center">
-                      <img src={Address} alt="" />
-                    </button>
-
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 ml-4">
-                      <img src={Delivery} alt="" />
-                    </button>
-
-                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 ml-4 packages-icon-active">
-                      <img src={OtherSettings} alt="" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeaderGuest
+        title="My Account"
+        icon={true}
+        IconOne={IdentityIcon}
+        IconTwo={Address}
+        IconThree={Delivery}
+        IconFour={OtherSettings}
+      />
       <div className="content-wrap">
         <div className="flex justify-between">
           <h1 className="text-3xl">Main contact information</h1>
@@ -65,63 +32,33 @@ const MyAccount = () => {
 
         <div className="grid grid-cols-3 gap-4 mt-10">
           <div>
-            <div className="form-control w-full mt-3">
-              <label className="label">
-                <span className="label-text text-xl text-sky-dark">
-                  First Name
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="John"
-                className="input input-bordered w-full"
-              />
-            </div>
-
-            <div className="form-control w-full mt-3">
-              <label className="label">
-                <span className="label-text text-xl text-sky-dark">
-                  Email Address
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="joe@company.com"
-                className="input input-bordered w-full"
-              />
-            </div>
-
-            <div className="form-control w-full mt-3">
-              <label className="label">
-                <span className="label-text text-xl text-sky-dark">
-                  Primary Contact No.
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="1 868 336-5896"
-                className="input input-bordered w-full"
-              />
-            </div>
+            <Input
+              title="First Name"
+              wrapStyle="mt-2"
+              textStyle="label-text text-xl text-sky-dark"
+            />
+            <Input
+              title="Email Address"
+              wrapStyle="mt-2"
+              textStyle="label-text text-xl text-sky-dark"
+            />
+            <Input
+              title="Primary Contact No."
+              wrapStyle="mt-2"
+              textStyle="label-text text-xl text-sky-dark"
+            />
           </div>
 
           <div>
-            <div className="form-control w-full mt-3">
-              <label className="label">
-                <span className="label-text text-xl text-sky-dark">
-                  Last Name
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="Doe"
-                className="input input-bordered w-full"
-              />
-            </div>
+            <Input
+              title="Last Name"
+              wrapStyle="mt-2"
+              textStyle="label-text text-xl text-sky-dark"
+            />
 
-            <div className="form-control w-full mt-3">
+            <div className="form-control w-full mt-2">
               <label className="label">
-                <span className="label-text text-xl text-sky-dark">
+                <span className="label-text text-base text-sky-dark">
                   Identification No. and Type
                 </span>
               </label>
@@ -137,18 +74,11 @@ const MyAccount = () => {
               </select>
             </div>
 
-            <div className="form-control w-full mt-3">
-              <label className="label">
-                <span className="label-text text-xl text-sky-dark">
-                  Secondary Contact No.
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="1 868 665-8954"
-                className="input input-bordered w-full"
-              />
-            </div>
+            <Input
+              title="Secondary Contact No."
+              wrapStyle="mt-2"
+              textStyle="label-text text-xl text-sky-dark"
+            />
           </div>
           <div>
             <h2 className="text-base">QR Code</h2>

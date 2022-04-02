@@ -6,7 +6,7 @@ import Title from "../../components/Title";
 const Home = () => {
   return (
     <>
-      <Header title="Payment Review" icon={false} />
+      <Header url="/pay" title="Payment Review" icon={false} />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
           <Title title="Order Summary" />

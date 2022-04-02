@@ -3,14 +3,14 @@ import Nav from "../../components/Nav";
 import Search from "../../components/Search";
 import Title from "../../components/Title";
 
-const Home = () => {
+const DetainedPackages = () => {
   return (
     <>
       <Header title="My Packages" icon={true} />
       <Nav />
       <div className="content-wrap">
         <div className="flex justify-between">
-          <Title title="Incoming packages" />
+          <Title title="Detained packages" />
           <Search
             classItem="form-control custom-search mr-16"
             iconColor="#999999"
@@ -107,4 +107,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DetainedPackages;

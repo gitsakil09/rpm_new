@@ -1,24 +1,31 @@
 import { MdArrowBack } from "react-icons/md";
-import flagTwo from "../../assets/image/user-flag-one-two.png";
+import { Link } from "react-router-dom";
 import flagOne from "../../assets/image/user-flag-one.png";
+import flagTwo from "../../assets/image/user-flag-two.png";
 import AccountMenu from "../Dropdown/AccountMenu";
 import DeliveredIcon from "../Icons/DeliveredIcon";
 import DetainedIcon from "../Icons/DetainedIcon";
 import IncomingIcon from "../Icons/IncomingIcon";
 import ReadyIcon from "../Icons/ReadyIcon";
 
-const Header = ({ title, icon }) => {
+const Header = ({ title, icon, url }) => {
   return (
     <div className="h-[188px] header">
       <div className="grid grid-cols-3 gap-4 px-14 items-center h-full">
         <div className="col-span-2">
           <div className="grid grid-cols-3 gap-4">
             <div className="flex">
-              <button className="btn btn-circle custom-circle-btn bg-white border-2 border-sky-blue hover:bg-sky-blue hover:border-sky-blue btn-lg translate-y-[-6px]">
-                <MdArrowBack className="text-sky-blue text-3xl" />
-              </button>
-              <div className="ml-6">
-                <h5 className="text-sm text-white">Welcome</h5>
+              {url ? (
+                <Link
+                  to={`${url}`}
+                  className="btn absolute btn-circle custom-circle-btn bg-white border-2 border-sky-blue hover:bg-sky-blue hover:border-sky-blue btn-lg translate-y-[-6px]"
+                >
+                  <MdArrowBack className="text-sky-blue text-3xl" />
+                </Link>
+              ) : null}
+
+              <div className="ml-20">
+                <h5 className="text-sm text-white">Welcome {url}</h5>
                 <h3 className="text-xl text-white">[Current User]</h3>
                 <h6 className="text-sm text-black-500 flex">
                   Trinidad and Tobago
@@ -38,21 +45,33 @@ const Header = ({ title, icon }) => {
                 </h2>
                 {icon ? (
                   <div className="mt-5 flex">
-                    <button className="btn btn-circle packages-circle-btn btn-xl border-0 hover:bg-white packages-icon-active">
+                    <Link
+                      to="/"
+                      className="btn btn-circle packages-circle-btn btn-xl border-0 hover:bg-white packages-icon-active"
+                    >
                       <IncomingIcon stroke="#fff" strokeWidth="1" />
-                    </button>
+                    </Link>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4 flex items-center justify-center">
+                    <Link
+                      to="/ready-for-collection"
+                      className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4 flex items-center justify-center"
+                    >
                       <ReadyIcon stroke="#fff" strokeWidth="1" />
-                    </button>
+                    </Link>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
+                    <Link
+                      to="/delivery-history"
+                      className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4"
+                    >
                       <DeliveredIcon stroke="#fff" strokeWidth="1" />
-                    </button>
+                    </Link>
 
-                    <button className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4">
+                    <Link
+                      to="/detained-packages"
+                      className="btn btn-circle packages-circle-btn btn-xl bg-orange border-0 hover:bg-white ml-4"
+                    >
                       <DetainedIcon stroke="#fff" strokeWidth="1" />
-                    </button>
+                    </Link>
                   </div>
                 ) : null}
               </div>

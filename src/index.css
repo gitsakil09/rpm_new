@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 500;
-  top: 0;
-  background: url("../src/assets/image/header-shape.png") left top no-repeat,
-    url("../src/assets/image/header-bg.png") left top repeat;
-}
-
 @layer components {
   body {
     background: #f2f4fc;
     height: 100vh;
+    min-height: 100%;
+  }
+  #root {
+    height: 100%;
+  }
+  .header {
+    @apply fixed left-0 right-0 top-0 z-50;
+    background: url("../src/assets/image/header-shape.png") left top no-repeat,
+      url("../src/assets/image/header-bg.png") left top repeat;
+  }
+  .body-img {
+    background: url("../src/assets/image/page-bg.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
   .custom-circle-btn:hover svg {
     @apply text-white;
@@ -28,12 +33,14 @@
     @apply bg-blue-dark;
   }
   .main-wrapper {
-    padding-top: 230px;
+    /* padding-top: 230px; */
     background: #f2f4fc;
+    height: 100%;
   }
   .content-wrap {
     margin-left: 260px;
     margin-bottom: 80px;
+    padding-top: 230px;
   }
   .custom-table :where(tbody th, tbody td) {
     background: transparent;
@@ -58,9 +65,18 @@
   .calculator-table thead {
     @apply border-b-[1px] border-gray-200;
   }
+  .territory {
+    @apply overflow-y-hidden overflow-x-scroll;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  .territory .territory-item {
+    display: inline-block;
+  }
 
   ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
   }
 
   ::-webkit-scrollbar-track {

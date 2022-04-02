@@ -24,7 +24,10 @@ const AccountMenu = () => {
           </li>
           <div className="w-full h-[1px] bg-blue my-6"></div>
           <li className="px-5">
-            <Link to="/" className="btn bg-sky border-0 text-white capitalize">
+            <Link
+              to="/login"
+              className="btn bg-sky border-0 text-white capitalize"
+            >
               Log Out
             </Link>
           </li>

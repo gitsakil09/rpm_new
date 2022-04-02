@@ -1,10 +1,12 @@
 import BtnWide from "../../components/Buttons/BtnWide";
 import Header from "../../components/Header";
+import Nav from "../../components/Nav";
 
 const Calculator = () => {
   return (
     <>
       <Header title="Shipping Calculator" icon={false} />
+      <Nav />
       <div className="content-wrap mt-10">
         <div className="grid grid-cols-7 gap-4">
           <div className="col-span-3">
@@ -55,8 +57,13 @@ const Calculator = () => {
               />
             </div>
 
-            <BtnWide title="Calculate Cost" classItem="bg-sky w-full mt-6" />
             <BtnWide
+              url="#"
+              title="Calculate Cost"
+              classItem="bg-sky w-full mt-6"
+            />
+            <BtnWide
+              url="#"
               title="Clear Calculator"
               classItem="bg-sky-300 w-full mt-6"
             />
@@ -144,7 +151,7 @@ const Calculator = () => {
         </div>
       </div>
       <div className="bg-blue-light bottom-0 left-0 p-10 w-full">
-        <BtnWide title="Cancel" classItem="ml-52 bg-orange" />
+        <BtnWide url="/" title="Cancel" classItem="ml-52 bg-orange" />
       </div>
     </>
   );

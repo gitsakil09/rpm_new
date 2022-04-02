@@ -1,5 +1,6 @@
 import BtnWide from "../../components/Buttons/BtnWide";
 import Header from "../../components/Header";
+import Nav from "../../components/Nav";
 import Search from "../../components/Search";
 import Title from "../../components/Title";
 
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <>
       <Header title="Package Payment" icon={false} />
+      <Nav />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
           <Title title="Package list" />
