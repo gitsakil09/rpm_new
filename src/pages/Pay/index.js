@@ -1,12 +1,14 @@
 import BtnWide from "../../components/Buttons/BtnWide";
 import Header from "../../components/Header";
+import Nav from "../../components/Nav";
 import Search from "../../components/Search";
 import Title from "../../components/Title";
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header title="Package Payment" icon={false} />
+      <Nav />
       <div className="content-wrap mt-10">
         <div className="flex justify-between">
           <Title title="Package list" />
@@ -21,7 +23,7 @@ const Home = () => {
               <tr>
                 <th className="bg-sky-light">
                   <label className="flex">
-                    <input type="checkbox" class="checkbox" />
+                    <input type="checkbox" className="checkbox" />
 
                     <div className="text-blue-dark text-base ml-2">
                       Select all
@@ -51,7 +53,7 @@ const Home = () => {
               <tr>
                 <th>
                   <label>
-                    <input type="checkbox" class="checkbox" />
+                    <input type="checkbox" className="checkbox" />
                   </label>
                 </th>
                 <td>
@@ -67,7 +69,7 @@ const Home = () => {
               <tr>
                 <th>
                   <label>
-                    <input type="checkbox" class="checkbox" />
+                    <input type="checkbox" className="checkbox" />
                   </label>
                 </th>
                 <td>
@@ -83,7 +85,7 @@ const Home = () => {
               <tr>
                 <th>
                   <label>
-                    <input type="checkbox" class="checkbox" />
+                    <input type="checkbox" className="checkbox" />
                   </label>
                 </th>
                 <td>
@@ -107,10 +109,14 @@ const Home = () => {
             <div className="text-2xl font-medium">Total :$10.50 TTD</div>
           </div>
         </div>
-        <div className="bg-blue-light fixed bottom-0 left-0 p-10 w-full">
-          <BtnWide title="Cancel" classItem="ml-52 bg-orange" />
-          <BtnWide title="Pay Now" classItem="ml-5 bg-green" />
-        </div>
+      </div>
+      <div className="bg-blue-light bottom-0 left-0 p-10 w-full">
+        <BtnWide url="/" title="Cancel" classItem="ml-52 bg-orange" />
+        <BtnWide
+          url="/payment-information"
+          title="Pay Now"
+          classItem="ml-5 bg-green"
+        />
       </div>
     </>
   );

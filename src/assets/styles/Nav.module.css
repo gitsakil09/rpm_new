@@ -20,10 +20,10 @@ nav.mainMenu.expanded {
 .mainMenu {
   background-color: #365f86;
   border-right: 1px solid #e5e5e5;
-  position: absolute;
+  position: fixed;
   top: 188px;
   bottom: 0;
-  height: calc(100% - 189px);
+  height: calc(100% - 179px);
   /* height: 100%; */
   left: 0;
   width: 80px;

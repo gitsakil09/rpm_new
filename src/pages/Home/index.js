@@ -1,12 +1,14 @@
 import Header from "../../components/Header";
+import Nav from "../../components/Nav";
 import Search from "../../components/Search";
 import Title from "../../components/Title";
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <div className="content-wrap mt-10">
+      <Header title="My Packages" icon={true} />
+      <Nav />
+      <div className="content-wrap">
         <div className="flex justify-between">
           <Title title="Incoming packages" />
           <Search

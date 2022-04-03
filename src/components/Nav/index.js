@@ -17,7 +17,7 @@ export default function Nav() {
         <div className="w-[232px] ml-2 h-[1px] bg-white"></div>
         <ul>
           <li>
-            <Link to="">
+            <Link to="/">
               <span className={classes.sidebarIcon}>
                 <HomeIcon stroke="#fff" strokeWidth="2" />
               </span>
@@ -60,16 +60,16 @@ export default function Nav() {
         </ul>
       </nav>
 
-      <div class="modal" id="my-modal-2">
-        <div class="modal-box relative">
-          <h3 class="font-bold text-xl">My web address</h3>
+      <div className="modal" id="my-modal-2">
+        <div className="modal-box relative">
+          <h3 className="font-bold text-xl">My web address</h3>
           <p className="mt-6">
             11190 NW 25TH ST STE 120 RPM96158 MIAMI, FL 33172-1917
           </p>
           <p>United States</p>
           <p>Phone number: ‪+18683498135‬</p>
-          <div class="modal-action absolute right-4 top-0">
-            <a href="#" class="text-blue-dark text-xl flex">
+          <div className="modal-action absolute right-4 top-0">
+            <a href="#" className="text-blue-dark text-xl flex">
               copy
               <i className="ml-2">
                 <CopyIcon stroke="#5888B5" strokeWidth="2" />
